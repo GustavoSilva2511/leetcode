@@ -24,27 +24,4 @@ def maxDepth(subtree):
 
     return level
 
-def _maxDepth(root):
-    if root is None:
-        return 0
-
-    q = deque([root])
-
-
-    while q:
-        curr = q.popleft()
-        curr_level += 1
-        
-        if curr.left is None and curr.right is None:
-            max_level = max(max_level, curr_level)
-            curr_level = 0
-
-        if curr.left:
-            q.append(curr.left)
-
-        if curr.right:
-            q.append(curr.right)
-
-    return levels
-
 print(maxDepth(root))
