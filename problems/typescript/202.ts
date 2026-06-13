@@ -12,7 +12,7 @@ function isHappy(n: number): boolean {
 
         currNumber = newNumberList.reduce((acumulator, currentValue) => {
             return acumulator + currentValue;
-        }, 0);
+        }, 0).toString();
     }
 
     return true;
